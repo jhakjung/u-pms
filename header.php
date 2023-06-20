@@ -106,8 +106,8 @@
 				</li>
 
 				<!-- 타 프로젝트 링크 -->
-				<span class="text-white text-center px-2 nav-link">|</span>
-				<li class="nav-item dropdown dropdown-wide d-block">
+				<!-- <span class="text-white text-center px-2 nav-link">|</span> -->
+				<li class="nav-item dropdown px-2 dropdown-wide d-block">
 					<a class="nav-link text-center dropdown-toggle" href="#" id="navbarDropdown" role="button"
 					data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					프로젝트
@@ -121,9 +121,9 @@
 						</div>
 					</div>
 				</li>
-				<span class="text-white text-center px-2 nav-link">|</span>
+				<!-- <span class="text-white text-center px-2 nav-link">|</span> -->
 
-				<li class="nav-item">
+				<li class="nav-item px-2">
 					<?php if(is_user_logged_in()) { ?>
 						<a href="<?php echo wp_logout_url(); ?>" class="a-white nav-link float-right">
 						<span><?php echo get_avatar(get_current_user_id(),19); ?></span>
@@ -133,10 +133,10 @@
 						<span>로그인</span></a>
 					<?php }?>
 				</li>
-				<span class="text-white text-center px-2 nav-link">|</span>
+				<!-- <span class="text-white text-center px-2 nav-link">|</span> -->
 
-				<li class="nav-item">
-					<a class="nav-link text-center" href="<?php echo site_url('/search'); ?>"><i class="<?php if (is_page('search')) {
+				<li class="nav-item px-2">
+					<a class="nav-link float-right text-center" href="<?php echo site_url('/search'); ?>"><i class="<?php if (is_page('search')) {
 						echo "vivid-amber";
 					} else {
 						echo "";

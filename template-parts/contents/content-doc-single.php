@@ -5,6 +5,6 @@
 
 	<!-- 댓글 -->
 	<div class="container mx-auto">
-		<?php comments_template(); ?>
+		<?php // comments_template(); ?>
 	</div>
 </div>

@@ -77,6 +77,7 @@ span.bg-vivid-cyan2 a,
 span.bg-light-dark a,
 span.bg-title1 a,
 span.badge.bg-vivid-cyan-blue a,
+span.badge.bg-vivid-amber a,
 span.badge.badge-danger a {
   color: #fff !important;
   text-decoration: none !important;

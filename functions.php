@@ -89,7 +89,7 @@ function university_post_types() {
     'show_in_rest' => true,
     // 'capability_type' => 'document',
     // 'map_meta_cap'  => true,
-    'supports' => array('title', 'editor', 'comments', 'author', 'tag'),
+    'supports' => array('title', 'editor', 'author', 'tag'),
     'rewrite' => array('slug' => 'documents'),
     'taxonomies'  => array('category'),
     'has_archive' => true,
