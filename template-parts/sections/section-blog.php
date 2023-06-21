@@ -13,10 +13,11 @@
 						$category_name = get_the_category()[0]->name;
 						$post_count++;
 						$slug = get_post_field('post_name', get_the_ID()); // 슬러그
-						if ($category_name == '이슈' || $category_name == '기타문서' || $category_name == '공정관리') {
-							$icon = 'fa-check-circle fa-sm';
-						} else {
+						$book_icon = array('기타자료', 'SOP', '기술관련', '기타자료', '계약관련');
+						if (in_array($category_name, $book_icon)) {
 							$icon = 'fa-book fa-sm';
+						} else {
+							$icon = 'fa-check-circle fa-sm';
 						}?>
 
 						<div id="" class="blog-card">

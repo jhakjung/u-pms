@@ -21,12 +21,11 @@
 						$category_name = get_the_category()[0]->name;
 						$post_count++;
 						$slug = get_post_field('post_name', get_the_ID()); // 슬러그
-						if ($category_name == 'sop' || $category_name == 'related_data-contract' || $category_name == 'related_data-tech' || $category_name == 'related_data-etc') {
+						$book_icon = array('기타자료', 'SOP', '기술관련', '기타자료', '계약관련');
+						if (in_array($category_name, $book_icon)) {
 							$icon = 'fa-book fa-sm';
 						} else {
-							$icon = 'fa-book fa-sm';
 							$icon = 'fa-check-circle fa-sm';
-
 						}?>
 
 						<div id="" class="blog-card">

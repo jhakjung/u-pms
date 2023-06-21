@@ -4,7 +4,6 @@
 	<div class="section-content">
     	<div class="container mt-1 p-2">
       		<h3 class="font-weight-bold pt-2">
-
 				<?php
 				// 현재 페이지가 index.php = 전체 게시글
 				if(is_page('blog')) { ?>
@@ -33,10 +32,12 @@
 				// single 포스트: single.php
 				} elseif(is_single()) {
 					$category_name = get_the_category()[0]->name;
-					if ($category_name == '이슈'  || $category_name == '기타발신' || $category_name == '공정관리') {
-						$icon = '<i class="fas fa-check-circle fa-sm"></i> &nbsp;';
-					} else {
+
+					$book_icon = array('기타자료', 'SOP', '기술관련', '기타자료', '계약관련');
+					if (in_array($category_name, $book_icon)) {
 						$icon = '<i class="fas fa-book fa-sm"></i> &nbsp;';
+					} else {
+						$icon = '<i class="fas fa-check-circle fa-sm"></i> &nbsp;';
 					}
 					echo $icon;
 					echo get_the_title(); ?>
@@ -75,8 +76,9 @@
 				<?php
 				// 검색 결과: search.php
 				} else { ?>
-					<span class="fs-3">
-						<i class="fas fa-search fa-sm"></i>&nbsp;&nbsp;???
+					<!-- <i class="fas fa-search fa-sm"></i>&nbsp;&nbsp; -->
+					<span class="text-secondary px-2 fs-3">
+					【 전체글 】
 					</span>
 				<?php } ?>
       		</h3>
