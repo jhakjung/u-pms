@@ -7,7 +7,7 @@
 
 				<?php
 				// 현재 페이지가 index.php = 전체 게시글
-				if(is_home()) { ?>
+				if(is_page('blog')) { ?>
 					<span class="text-secondary px-2 fs-3">
 					【 전체 글 】
 					</span>
@@ -36,7 +36,7 @@
 					if ($category_name == '이슈'  || $category_name == '기타발신' || $category_name == '공정관리') {
 						$icon = '<i class="fas fa-check-circle fa-sm"></i> &nbsp;';
 					} else {
-						$icon = '<i class="fas vivid-purple fa-book fa-sm"></i> &nbsp;';
+						$icon = '<i class="fas fa-book fa-sm"></i> &nbsp;';
 					}
 					echo $icon;
 					echo get_the_title(); ?>

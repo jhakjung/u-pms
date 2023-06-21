@@ -8,15 +8,25 @@
 
 					<?php
 					$post_count = 0; // 포스트 카운터 변수 초기화
-					while (have_posts()) {
-						the_post();
+
+					// 전체 게시물 쿼리
+    				$args = array(
+					'post_type' => 'post',
+					'posts_per_page' => -1, // 전체 게시물 표시
+					);
+					$query = new WP_Query($args);
+
+					while ($query->have_posts()) {
+						$query->the_post();
 						$category_name = get_the_category()[0]->name;
 						$post_count++;
 						$slug = get_post_field('post_name', get_the_ID()); // 슬러그
-						if ($category_name == '이슈' || $category_name == '기타문서' || $category_name == '공정관리') {
-							$icon = 'fa-check-circle fa-sm';
+						if ($category_name == 'sop' || $category_name == 'related_data-contract' || $category_name == 'related_data-tech' || $category_name == 'related_data-etc') {
+							$icon = 'fa-book fa-sm';
 						} else {
 							$icon = 'fa-book fa-sm';
+							$icon = 'fa-check-circle fa-sm';
+
 						}?>
 
 						<div id="" class="blog-card">

@@ -32,10 +32,11 @@
 
 				<!-- 이슈 메뉴 -->
 				<li class="nav-item mx-2 <?php
-					if(is_category('issue') OR (is_singular('post') AND has_category('issue'))) { echo 'active'; }
+					if(is_page('blog')) { echo 'active'; }
 					else { echo '';} ?>">
 
-				<a class="nav-link text-center" href="<?php echo my_category_archive_link('issue'); ?>">이슈</a>
+				<a class="nav-link text-center" href="<?php echo site_url('/blog'); ?>">전체글</a>
+				<!-- <a class="nav-link text-center" href="<?php echo my_category_archive_link('issue'); ?>">이슈</a> -->
 				</li>
 
 				<!-- 성과물 메뉴 -->
@@ -100,7 +101,7 @@
 					<a class="dropdown-item" href="<?php echo my_category_archive_link('progress'); ?>">공정관리</a>
 					<a class="dropdown-item" href="<?php echo my_category_archive_link('meeting'); ?>">회의록</a>
 					<div class="dropdown-divider"></div>
-					<a class="dropdown-item" href="<?php echo my_category_archive_link('outgoing'); ?>">기타발신</a>
+					<a class="dropdown-item" href="<?php echo my_category_archive_link('etc'); ?>">기타문서</a>
 
 					</div>
 				</li>
