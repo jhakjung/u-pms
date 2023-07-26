@@ -662,3 +662,10 @@ ul.pagination {
   width: 100% !important;
   font-size: 2.5rem !important;
 }
+
+// all-issue page
+.all-issue hr{
+  width: 5% !important;
+// padding-left: none !important;
+// padding-right: none !important;
+}

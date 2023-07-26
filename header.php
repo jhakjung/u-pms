@@ -30,6 +30,14 @@
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav ml-auto">
 
+				<!-- 테스트용 메뉴 -->
+				<li class="nav-item mx-2 <?php
+					if(is_category('issue') OR (is_singular('post') AND has_category('issue'))) { echo 'active'; }
+					else { echo '';} ?>">
+
+					<a class="nav-link text-center" href="<?php echo site_url('/test'); ?>">테스트</a>
+				</li>
+
 				<!-- 이슈 메뉴 -->
 				<li class="nav-item mx-2 <?php
 					if(is_category('issue') OR (is_singular('post') AND has_category('issue'))) { echo 'active'; }

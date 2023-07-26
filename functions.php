@@ -329,3 +329,25 @@ function add_extension_to_media_title($title, $id) {
 }
 add_filter('the_title', 'add_extension_to_media_title', 10, 2);
 
+// 성과물 카테고리를 반환하는 함수
+function get_document_categories() {
+  // $taxonomy = 'document_category';
+	$categories = get_terms(array(
+		'taxonomy' => 'document_category',
+		'hide_empty' => false,
+		'orderby' => 'slug',
+		'order' => 'ASC',
+	));
+  return $categories;
+}
+
+// 성과물 카테고리의 슬러그를 배열로 반환하는 함수
+function get_doc_cat_slug() {
+  $categories = get_document_categories();
+  $category_slugs = array();
+  foreach ($categories as $category) :
+	  $category_slugs[] = $category->slug;
+  endforeach;
+
+  return $category_slugs;
+}

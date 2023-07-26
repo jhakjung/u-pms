@@ -8,7 +8,9 @@
             if (!empty($current_category)) {
                 $current_category_name = $current_category[0]->name;
             }
-            $categories = array('cat01', 'cat02', 'cat03', 'cat04', 'cat05', 'cat06', 'cat07', 'cat08', 'cat09', 'cat10', 'cat11', 'cat12');
+
+            $categories = get_doc_cat_slug();
+            // array('cat01', 'cat02', 'cat03', 'cat04', 'cat05', 'cat06', 'cat07', 'cat08', 'cat09', 'cat10', 'cat11', 'cat12');
 
             foreach ($categories as $category_slug) {
                 $category = get_term_by('slug', $category_slug, 'document_category');
